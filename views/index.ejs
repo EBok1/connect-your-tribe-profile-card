@@ -1,14 +1,44 @@
 <%- include('./partials/head') %>
 
-<article>
-  <header>
-    <h1>Hello</h1>
-    <p>my name is</p>
-  </header>
+  <article>
 
-  <p><%=data.name %></p>
+    <section>
+      <h1>
+        <%= data.name %>
+          <%= data.surname %>
+      </h1>
+      <h2>Student FDND</h2>
+      <div> <img src="/images/IMG_0816.JPG" alt="photo" class="center"> </div>
+    </section>
 
-  <footer></footer>
-</article>
+    <section>
+      <section></section>
+      <section>
+        <h3>
+          <%= data.bio %>
+        </h3>
+      </section>
+    </section>
 
-<%- include('./partials/foot') %>
+    <section>
+      <section></section>
+      <section>
+        <p> <a href="https://www.instagram.com/ellenoor_bok/"><img src="/images/pngwing.com (1).png"
+              style="width:50px;height:50px;" class="name">
+          </a>
+        </p>
+        <p> <a href="https://www.linkedin.com/in/ellenoor-bok-029096290/"><img src="/images/pngwing.com (2).png"
+              style="width:55px;height:55px;" class="name">
+          </a>
+        </p>
+        <p> <a href="https://www.facebook.com/ellenoor.bok/"><img src="/images/pngwing.com (4).png"
+              style="width:60px;height:60px;" class="name">
+          </a>
+        </p>
+      </section>
+    </section>
+
+  </article>
+
+
+  <%- include('./partials/foot') %>

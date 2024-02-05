@@ -1,0 +1,172 @@
+body {
+	background-image: url(https://i.pinimg.com/564x/c5/b8/3e/c5b83eafa630e9836080368d7d4e1367.jpg);
+	background-size: 100%;
+
+	height:100vh;
+  /* om elementen in het midden te zetten */
+	display:grid;
+	place-content:center;
+  align-items:center; 
+}
+
+/* om foto in het midden te plaatsen */ 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 70%;
+
+}
+
+/* title/name */
+h1 {
+  font-family:"Gill Sans", sans-serif;
+  font-size: 1.6rem;
+  display: block;
+  margin-left: 2.3rem;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  width: 70%;
+}
+
+/**/
+h2 {
+  font-family:"Gill Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  display: block;
+  margin-left: 2.3rem;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*tekst rechter zijde van kaart*/ 
+h3{
+  font-family:"Gill Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  display: block;
+  margin-left: 2.3rem;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+  
+}
+
+
+article {
+	position:relative;
+	height:clamp(23em, 50vw, 30em); /* zorgt ervoor dat kaart niet grooter en kleiner wordt dan aangegeven maat */
+	aspect-ratio: 2/3;
+	background:white;
+	
+	perspective:100em;
+  
+}
+
+
+article > section {
+	position:absolute; /* zorgt dat alle article sections over elkaar komen te staan*/ 
+	top: 0;
+	left:0;
+	
+	width:100%;
+	height:100%;
+	
+	background:#F89BAE;
+
+}
+
+
+
+/* section 3*/
+article > section:nth-of-type(3) {
+	transition-duration:1s;
+	transition-delay:1s;
+	opacity: 100;
+	transform-origin:left center;
+  transform-style: preserve-3d;
+}
+
+/* wanneer je over section 3 heen gaat met je muis klapt kaart open */ 
+article:hover > section:nth-of-type(3) {
+	transition-delay:0s;
+	transform:rotateY(-180deg);
+  border-radius: 30rem;
+}
+
+/*front section 3*/
+article > section:nth-of-type(3) section{
+  position:absolute;
+	top:0;
+	left:0;
+
+  width:100%;
+	height:100%;
+  background-image: url(https://i.pinimg.com/564x/5a/f7/aa/5af7aa11b5e56b26d7c2fc7614c6b7f0.jpg);
+  background-size: 100%;
+  backface-visibility: hidden;
+  
+}
+
+/*back section 3*/
+article > section:nth-of-type(3) section:nth-of-type(2){
+  background: #F5C92A;
+  transform: rotateY(180deg);
+}
+
+/*link button*/ 
+article > section:nth-of-type(3) img:hover {
+  background-color: #84CCE2;
+  scale: 1.2;
+  transition: 500ms;
+}
+/* om button een plek te geven*/ 
+.name {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5rem;
+  width: 70%;
+  transition: 500ms;
+}
+
+
+
+/* section 2*/
+article > section:nth-of-type(2) {
+	transform-origin:right center;
+	transition-duration:1s;	
+  transform-style: preserve-3d;
+}
+
+/* wanneer je over section 2 heen gaat met je muis klapt 
+rechterkant van de kaart 1sec later open dan linker kant */ 
+article:hover > section:nth-of-type(2) {
+	transform:rotateY(180deg);
+	transition-delay:1s;
+}
+
+/*front section 2*/
+article > section:nth-of-type(2) section{
+  position:absolute;
+	top:0;
+	left:0;
+
+  width:100%;
+	height:100%;
+  background:#84CCE2;
+  backface-visibility: hidden;
+}
+
+/*back section 2*/
+article > section:nth-of-type(2) section:nth-of-type(2){
+  background:#0A8570;
+  transform: rotateY(180deg);
+}
+
+
