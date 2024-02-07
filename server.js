@@ -40,3 +40,9 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+
+const cardButton = document.querySelector('#card-open')
+cardButton.addEventListener('click', toggleCard)
+function toggleCard() {
+  cardButton.classList.toggle('open')
+}

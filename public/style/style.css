@@ -1,15 +1,15 @@
 body {
-	background-image: url(https://i.pinimg.com/564x/c5/b8/3e/c5b83eafa630e9836080368d7d4e1367.jpg);
-	background-size: 100%;
+  background-color: #F4F4F4;
+  background-size: 100%;
 
-	height:100vh;
+  height: 100vh;
   /* om elementen in het midden te zetten */
-	display:grid;
-	place-content:center;
-  align-items:center; 
+  display: grid;
+  place-content: center;
+  align-items: center;
 }
 
-/* om foto in het midden te plaatsen */ 
+/* om foto in het midden te plaatsen */
 .center {
   display: block;
   margin-left: auto;
@@ -22,7 +22,7 @@ body {
 
 /* title/name */
 h1 {
-  font-family:"Gill Sans", sans-serif;
+  font-family: "Gill Sans", sans-serif;
   font-size: 1.6rem;
   display: block;
   margin-left: 2.3rem;
@@ -34,7 +34,7 @@ h1 {
 
 /**/
 h2 {
-  font-family:"Gill Sans", sans-serif;
+  font-family: "Gill Sans", sans-serif;
   font-size: 1rem;
   font-weight: lighter;
   display: block;
@@ -44,129 +44,160 @@ h2 {
   margin-bottom: 0;
 }
 
-/*tekst rechter zijde van kaart*/ 
-h3{
-  font-family:"Gill Sans", sans-serif;
+/*tekst rechter zijde van kaart*/
+h3 {
+  font-family: "Gill Sans", sans-serif;
   font-size: 1rem;
   font-weight: lighter;
   display: block;
   margin-left: 2.3rem;
-  margin-right: auto;
+  margin-right: 2em;
   margin-top: 2.5rem;
   margin-bottom: 0;
-  
+
 }
 
 
 article {
-	position:relative;
-	height:clamp(23em, 50vw, 30em); /* zorgt ervoor dat kaart niet grooter en kleiner wordt dan aangegeven maat */
-	aspect-ratio: 2/3;
-	background:white;
-	
-	perspective:100em;
-  
+  position: relative;
+  height: clamp(23em, 50vw, 30em);
+  /* zorgt ervoor dat kaart niet grooter en kleiner wordt dan aangegeven maat */
+  aspect-ratio: 2/3;
+  background: white;
+
+  perspective: 100em;
+
 }
 
 
-article > section {
-	position:absolute; /* zorgt dat alle article sections over elkaar komen te staan*/ 
-	top: 0;
-	left:0;
-	
-	width:100%;
-	height:100%;
-	
-	background:#F89BAE;
+article>section {
+  position: absolute;
+  /* zorgt dat alle article sections over elkaar komen te staan*/
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: #F89BAE;
 
 }
 
 
 
 /* section 3*/
-article > section:nth-of-type(3) {
-	transition-duration:1s;
-	transition-delay:1s;
-	opacity: 100;
-	transform-origin:left center;
+article>section:nth-of-type(3) {
+  transition-duration: 1s;
+  transition-delay: 1s;
+  opacity: 100;
+  transform-origin: left center;
   transform-style: preserve-3d;
+  border-left: 0 solid #F4F4F4;
 }
 
-/* wanneer je over section 3 heen gaat met je muis klapt kaart open */ 
-article:hover > section:nth-of-type(3) {
-	transition-delay:0s;
-	transform:rotateY(-180deg);
+/* wanneer je over section 3 heen gaat met je muis klapt kaart open */
+article:hover>section:nth-of-type(3) {
+  transition-delay: 0s;
+  transform: rotateY(-180deg);
   border-radius: 30rem;
+  border-left: 2em solid #F4F4F4;
 }
 
 /*front section 3*/
-article > section:nth-of-type(3) section{
-  position:absolute;
-	top:0;
-	left:0;
+article>section:nth-of-type(3) section {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-  width:100%;
-	height:100%;
+  width: 100%;
+  height: 100%;
   background-image: url(https://i.pinimg.com/564x/5a/f7/aa/5af7aa11b5e56b26d7c2fc7614c6b7f0.jpg);
   background-size: 100%;
   backface-visibility: hidden;
-  
+
 }
 
 /*back section 3*/
-article > section:nth-of-type(3) section:nth-of-type(2){
+article>section:nth-of-type(3) section:nth-of-type(2) {
   background: #F5C92A;
   transform: rotateY(180deg);
 }
 
-/*link button*/ 
-article > section:nth-of-type(3) img:hover {
+/*link button*/
+article>section:nth-of-type(3) img:hover {
   background-color: #84CCE2;
   scale: 1.2;
   transition: 500ms;
+  margin-right: 2em;
 }
-/* om button een plek te geven*/ 
-.name {
+
+/* om button een plek te geven*/
+.instagram {
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3.5rem;
   width: 70%;
+  max-width: 50px;
   transition: 500ms;
 }
 
+.linkedin {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5rem;
+  width: 70%;
+  max-width: 55px;
+  transition: 500ms;
+}
 
+.facebook {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.5rem;
+  width: 70%;
+  max-width: 60px;
+  transition: 500ms;
+}
 
 /* section 2*/
-article > section:nth-of-type(2) {
-	transform-origin:right center;
-	transition-duration:1s;	
+article>section:nth-of-type(2) {
+  transform-origin: right center;
+  transition-duration: 1s;
   transform-style: preserve-3d;
 }
 
 /* wanneer je over section 2 heen gaat met je muis klapt 
-rechterkant van de kaart 1sec later open dan linker kant */ 
-article:hover > section:nth-of-type(2) {
-	transform:rotateY(180deg);
-	transition-delay:1s;
+rechterkant van de kaart 1sec later open dan linker kant */
+article:hover>section:nth-of-type(2) {
+  transform: rotateY(180deg);
+  transition-delay: 1s;
+  margin-left: 2em;
 }
 
 /*front section 2*/
-article > section:nth-of-type(2) section{
-  position:absolute;
-	top:0;
-	left:0;
+article>section:nth-of-type(2) section {
+  position: absolute;
+  top: 0;
+  left: 0;
 
-  width:100%;
-	height:100%;
-  background:#84CCE2;
+  width: 100%;
+  height: 100%;
+  background: #84CCE2;
   backface-visibility: hidden;
 }
 
 /*back section 2*/
-article > section:nth-of-type(2) section:nth-of-type(2){
-  background:#0A8570;
+article>section:nth-of-type(2) section:nth-of-type(2) {
+  background: #0A8570;
   transform: rotateY(180deg);
 }
 
-
+/* 
+#card-open.open {
+  transition-delay: 0s;
+  transform: rotateY(-180deg);
+  border-radius: 30rem;
+} */
