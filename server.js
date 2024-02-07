@@ -41,8 +41,3 @@ app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
-const cardButton = document.querySelector('#card-open')
-cardButton.addEventListener('click', toggleCard)
-function toggleCard() {
-  cardButton.classList.toggle('open')
-}
