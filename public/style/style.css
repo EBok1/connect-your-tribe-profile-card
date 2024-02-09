@@ -57,6 +57,16 @@ h3 {
 
 }
 
+p {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: lighter;
+  display: block;
+  margin-left: 2.3rem;
+  margin-right: 2em;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 
 article {
   position: relative;
@@ -79,8 +89,8 @@ article>section {
   width: 100%;
   height: 100%;
 
-  background: #F89BAE;
-
+  background: #D7A9E3FF;
+  border: solid 0.2em;
 }
 
 
@@ -93,6 +103,7 @@ article>section:nth-of-type(3) {
   transform-origin: left center;
   transform-style: preserve-3d;
   border-left: 0 solid #F4F4F4;
+  /* border zelfde kleur als achtergrond, zodat niet zichtbaar bij het openklappen */
 }
 
 /* wanneer je over section 3 heen gaat met je muis klapt kaart open */
@@ -101,6 +112,7 @@ article:hover>section:nth-of-type(3) {
   transform: rotateY(-180deg);
   border-radius: 30rem;
   border-left: 2em solid #F4F4F4;
+  border-top: solid #F4F4F4;
 }
 
 /*front section 3*/
@@ -108,24 +120,24 @@ article>section:nth-of-type(3) section {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-  background-image: url(https://i.pinimg.com/564x/5a/f7/aa/5af7aa11b5e56b26d7c2fc7614c6b7f0.jpg);
-  background-size: 100%;
+  background-image: url(/images/IMG_0816.JPG);
+  background-size: 112%;
   backface-visibility: hidden;
+  border: solid .2em;
 
 }
 
 /*back section 3*/
 article>section:nth-of-type(3) section:nth-of-type(2) {
-  background: #F5C92A;
+  background: #8BBEE8FF;
   transform: rotateY(180deg);
 }
 
 /*link button*/
 article>section:nth-of-type(3) img:hover {
-  background-color: #84CCE2;
+  background-color: #D7A9E3FF;
   scale: 1.2;
   transition: 500ms;
   margin-right: 2em;
@@ -185,19 +197,28 @@ article>section:nth-of-type(2) section {
 
   width: 100%;
   height: 100%;
-  background: #84CCE2;
+  background: #D7A9E3FF;
   backface-visibility: hidden;
 }
 
 /*back section 2*/
 article>section:nth-of-type(2) section:nth-of-type(2) {
-  background: #0A8570;
+  background: #A8D5BAFF;
   transform: rotateY(180deg);
 }
 
-/* 
-#card-open.open {
-  transition-delay: 0s;
-  transform: rotateY(-180deg);
-  border-radius: 30rem;
-} */
+
+#card-open {
+  border: solid white;
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  left: 39%;
+  top: 92%;
+  display: flex;
+}
+
+i {
+  color: white;
+  margin: .2em;
+}
